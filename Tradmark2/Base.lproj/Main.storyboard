@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sse-JV-1Wh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cc2-l2-EQN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nby-eW-Bbd" id="BjG-hX-v7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="77v-Am-Lbo">
@@ -164,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ol2-B7-Vcd" id="FfK-7j-7Gi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et4-2R-Ffu">
@@ -239,12 +239,26 @@
                                             <constraint firstAttribute="height" constant="46" id="qXS-RN-VNy"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5v-Zl-bJD">
+                                        <rect key="frame" x="327" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CKy-5j-8cg"/>
+                                            <constraint firstAttribute="width" constant="40" id="FJP-ag-YRk"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <state key="normal" image="more.png"/>
+                                        <connections>
+                                            <action selector="btnMenu:" destination="Cc2-l2-EQN" eventType="touchUpInside" id="MWg-9U-8Fi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="0.40415933100000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="19s-qK-GOj"/>
                                     <constraint firstItem="sZf-67-Up6" firstAttribute="centerY" secondItem="zum-hJ-pOW" secondAttribute="centerY" id="7Uv-gm-swv"/>
+                                    <constraint firstAttribute="trailing" secondItem="m5v-Zl-bJD" secondAttribute="trailing" constant="8" id="SD4-4C-x5p"/>
                                     <constraint firstItem="sZf-67-Up6" firstAttribute="leading" secondItem="zum-hJ-pOW" secondAttribute="leading" constant="8" id="wgc-dZ-uH8"/>
+                                    <constraint firstItem="m5v-Zl-bJD" firstAttribute="centerY" secondItem="zum-hJ-pOW" secondAttribute="centerY" id="zoA-0d-IdG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SwW-Cv-dAQ">
@@ -354,6 +368,26 @@
             </objects>
             <point key="canvasLocation" x="796" y="123.68815592203899"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="AqH-ND-Jjl">
+            <objects>
+                <viewController storyboardIdentifier="POPOVER" id="agz-cr-LWN" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vBX-Qb-UdU"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbO-43-iCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JP5-A9-NPL">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.93725490199999995" blue="0.81386718749999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="280" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWP-8o-RFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="-456"/>
+        </scene>
         <!--Category View Controller-->
         <scene sceneID="43T-Q2-Gc9">
             <objects>
@@ -374,7 +408,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TTQ-Ii-H6m" id="Icz-Gh-iIH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD7-cv-LEv">
@@ -780,6 +814,7 @@ info@muscleguru.in</string>
     </scenes>
     <resources>
         <image name="cancel-music.png" width="64" height="64"/>
+        <image name="more.png" width="64" height="64"/>
         <image name="skip-track.png" width="64" height="64"/>
         <image name="sort-down.png" width="64" height="64"/>
     </resources>

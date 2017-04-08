@@ -27,6 +27,7 @@
 		B30798E91E98AC2B0045D863 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30798E81E98AC2B0045D863 /* ContactUsViewController.m */; };
 		B30798EB1E98B0F30045D863 /* cancel-music.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EA1E98B0F30045D863 /* cancel-music.png */; };
 		B30798ED1E98B1BD0045D863 /* sort-down.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EC1E98B1BD0045D863 /* sort-down.png */; };
+		B30798EF1E98B9D40045D863 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EE1E98B9D40045D863 /* more.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B30798E81E98AC2B0045D863 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		B30798EA1E98B0F30045D863 /* cancel-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-music.png"; sourceTree = "<group>"; };
 		B30798EC1E98B1BD0045D863 /* sort-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sort-down.png"; sourceTree = "<group>"; };
+		B30798EE1E98B9D40045D863 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 		B30798D61E98A5470045D863 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B30798EE1E98B9D40045D863 /* more.png */,
 				B30798EC1E98B1BD0045D863 /* sort-down.png */,
 				B30798EA1E98B0F30045D863 /* cancel-music.png */,
 				B30798D71E98A5620045D863 /* skip-track.png */,
@@ -361,6 +364,7 @@
 				B30798D81E98A5620045D863 /* skip-track.png in Resources */,
 				B30798ED1E98B1BD0045D863 /* sort-down.png in Resources */,
 				B30798971E9893600045D863 /* Main.storyboard in Resources */,
+				B30798EF1E98B9D40045D863 /* more.png in Resources */,
 				B30798EB1E98B0F30045D863 /* cancel-music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
