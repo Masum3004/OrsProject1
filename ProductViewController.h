@@ -11,4 +11,7 @@
 @interface ProductViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *productTableView;
+
+@property (weak, nonatomic) NSString *categoryID;
+@property (weak, nonatomic) NSString *searchID;
 @end

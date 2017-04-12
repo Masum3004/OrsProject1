@@ -10,4 +10,17 @@
 
 @interface ProductDetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *productTableView;
+
+@property (weak, nonatomic)NSString *productID;
+
+@property (weak, nonatomic) IBOutlet UIImageView *lblProductImageView;
+@property (weak, nonatomic) IBOutlet UILabel *lblProductName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblBrandName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblGoal;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblIngredint;
+
 @end

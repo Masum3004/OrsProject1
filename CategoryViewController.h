@@ -10,4 +10,5 @@
 
 @interface CategoryViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 @end

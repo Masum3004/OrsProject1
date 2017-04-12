@@ -10,4 +10,5 @@
 
 @interface CategoryTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblCategoryName;
 @end

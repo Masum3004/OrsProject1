@@ -10,4 +10,9 @@
 
 @interface ProdcutDetailsTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblProductName;
+@property (weak, nonatomic) IBOutlet UILabel *lblServingSize;
+@property (weak, nonatomic) IBOutlet UILabel *lblServingContainerSize;
+@property (weak, nonatomic) IBOutlet UILabel *lblDiscount;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddToCart;
 @end

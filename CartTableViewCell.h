@@ -10,4 +10,9 @@
 
 @interface CartTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblSize;
+@property (weak, nonatomic) IBOutlet UILabel *lblPrice;
+@property (weak, nonatomic) IBOutlet UILabel *lblProductName;
+@property (weak, nonatomic) IBOutlet UIButton *btnDelete;
+@property (weak, nonatomic) IBOutlet UIView *btnChaneQty;
 @end
