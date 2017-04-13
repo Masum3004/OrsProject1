@@ -9,8 +9,14 @@
 #import "LoginViewController.h"
 #import "AppConstant.h"
 
-@interface LoginViewController ()
+#import "AFNetworking.h"
+#import "UIView+Toast.h"
+#import "MBProgressHUD.h"
 
+@interface LoginViewController ()
+{
+    MBProgressHUD *hud;
+}
 @end
 
 @implementation LoginViewController
@@ -47,7 +53,16 @@
 
 - (IBAction)btnSubmit:(id)sender {
     
+    [self.view endEditing:YES];
     
+    if (self.txtEmail.text.length == 0 || self.txtPassword.text.length == 0) {
+        
+        [self.view makeToast:@"Please enter all fields."];
+    }
+    else {
+        
+        [self checkLogin];
+    }
 }
 
 #pragma mark - Button Menu methods
@@ -76,6 +91,98 @@
         }
         
     }
+}
+
+
+
+-(void) checkLogin {
+    
+    [self showHud];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    /*
+     {
+     "txtpass" : "123123",
+     "txtemail" : "hello@gmail.com"
+     }
+     */
+    
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys:
+                            _txtEmail.text,@"txtemail",
+                            _txtPassword.text,@"txtpass",
+                            nil];
+    NSLog(@">>%@",params);
+    manager.requestSerializer = [AFJSONRequestSerializer serializer]; // if request JSON format
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    NSLog(@">> %@",[NSString stringWithFormat:@"%@%@",BASE_URL,CHECK_LOGIN]);
+    
+    [manager POST:[NSString stringWithFormat:@"%@%@",BASE_URL,CHECK_LOGIN] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
+        if (responseObject != [NSNull null]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self parseDataResponseObjectForInchagrge:responseObject];
+            });
+            
+        }
+        else {
+            
+            [self hideHud];
+            [self.view makeToast:@"No response from server."];
+        }
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"ERROR ----->> %@",error);
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [self.view makeToast:@"Please check Internet connectivity."];
+    }];
+    
+    
+    
+}
+-(void)parseDataResponseObjectForInchagrge:(NSDictionary *)dictionary {
+    
+    NSLog(@">> %@",dictionary);
+}
+
+#pragma mark -MBProgressHUD methods
+
+-(void)showHud
+{
+    dispatch_async(dispatch_get_main_queue()
+                   , ^{
+                       hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                       hud.delegate = (id)self;
+                       
+                   });
+}
+
+-(void)hideHud
+{
+    dispatch_async(dispatch_get_main_queue()
+                   , ^{
+                       [hud hide:YES];
+                       //[hud removeFromSuperview];
+                       
+                   });
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField; {
+    [textField resignFirstResponder];
+    return YES;
+}
+-(BOOL)textFieldShouldBeginEditing: (UITextField *)textField
+{
+    return YES;
 }
 
 

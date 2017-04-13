@@ -21,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtState;
 @property (weak, nonatomic) IBOutlet UITextField *txtPincode;
 @property (weak, nonatomic) IBOutlet UITextField *txtCountry;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end

@@ -48,6 +48,12 @@
 
 #define FETCH_PRODUCT_DETAIL @"showproductdetail.php?"
 
+#define CHECK_LOGIN @"checklogin.php"
+
+#define USER_REGISTRATION @"registeruser.php"
+
+#define FORGOT_PASSWORD @"forgetpassword.php"
+
 
 /*      KEY NAMES       */
 
