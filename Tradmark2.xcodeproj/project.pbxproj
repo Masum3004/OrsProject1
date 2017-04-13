@@ -65,6 +65,9 @@
 		B3178C231E9DF98D0021D850 /* wheyprotein.png in Resources */ = {isa = PBXBuildFile; fileRef = B3178C1D1E9DF98D0021D850 /* wheyprotein.png */; };
 		B3178C271E9E21800021D850 /* CustomAnimationAndTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = B3178C261E9E21800021D850 /* CustomAnimationAndTransiotion.m */; };
 		B3178C2B1E9E226C0021D850 /* CustomLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3178C2A1E9E226C0021D850 /* CustomLabelViewController.m */; };
+		B3DFCD511E9F7A3A00A86BB3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFCD501E9F7A3A00A86BB3 /* LoginViewController.m */; };
+		B3DFCD541E9F7A4400A86BB3 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFCD531E9F7A4400A86BB3 /* RegistrationViewController.m */; };
+		B3DFCD571E9F7A5000A86BB3 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DFCD561E9F7A5000A86BB3 /* ForgotPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +191,12 @@
 		B3178C261E9E21800021D850 /* CustomAnimationAndTransiotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationAndTransiotion.m; sourceTree = "<group>"; };
 		B3178C291E9E226C0021D850 /* CustomLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLabelViewController.h; sourceTree = "<group>"; };
 		B3178C2A1E9E226C0021D850 /* CustomLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLabelViewController.m; sourceTree = "<group>"; };
+		B3DFCD4F1E9F7A3A00A86BB3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B3DFCD501E9F7A3A00A86BB3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B3DFCD521E9F7A4400A86BB3 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		B3DFCD531E9F7A4400A86BB3 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		B3DFCD551E9F7A5000A86BB3 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		B3DFCD561E9F7A5000A86BB3 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +293,7 @@
 		B30798BF1E9894330045D863 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B3DFCD4E1E9F7A2800A86BB3 /* User */,
 				B3178C281E9E22560021D850 /* CustomLabelClass */,
 				B3178C0E1E9DEC370021D850 /* Home */,
 				B3178C061E9DE79C0021D850 /* BrandList */,
@@ -508,6 +518,19 @@
 			name = CustomLabelClass;
 			sourceTree = "<group>";
 		};
+		B3DFCD4E1E9F7A2800A86BB3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B3DFCD4F1E9F7A3A00A86BB3 /* LoginViewController.h */,
+				B3DFCD501E9F7A3A00A86BB3 /* LoginViewController.m */,
+				B3DFCD521E9F7A4400A86BB3 /* RegistrationViewController.h */,
+				B3DFCD531E9F7A4400A86BB3 /* RegistrationViewController.m */,
+				B3DFCD551E9F7A5000A86BB3 /* ForgotPasswordViewController.h */,
+				B3DFCD561E9F7A5000A86BB3 /* ForgotPasswordViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -685,14 +708,17 @@
 				B3178BFB1E9DDFD70021D850 /* MBProgressHUD.m in Sources */,
 				B3178BEB1E9DDF890021D850 /* AFHTTPRequestOperationManager.m in Sources */,
 				B30798D21E989DAD0045D863 /* ProductTableViewCell.m in Sources */,
+				B3DFCD571E9F7A5000A86BB3 /* ForgotPasswordViewController.m in Sources */,
 				B3178BCF1E9DDF7A0021D850 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				B3178C2B1E9E226C0021D850 /* CustomLabelViewController.m in Sources */,
 				B30798CC1E9894F10045D863 /* CategoryViewController.m in Sources */,
 				B3178C271E9E21800021D850 /* CustomAnimationAndTransiotion.m in Sources */,
 				B307988E1E9893600045D863 /* main.m in Sources */,
 				B3178BED1E9DDF890021D850 /* AFNetworkReachabilityManager.m in Sources */,
+				B3DFCD511E9F7A3A00A86BB3 /* LoginViewController.m in Sources */,
 				B3178BF11E9DDF890021D850 /* AFURLResponseSerialization.m in Sources */,
 				B3178C141E9DEC530021D850 /* HomeViewController.m in Sources */,
+				B3DFCD541E9F7A4400A86BB3 /* RegistrationViewController.m in Sources */,
 				B30798DB1E98A5EC0045D863 /* ProdcutDetailsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,8 @@
 #import "CartViewController.h"
 
 #import "CartTableViewCell.h"
+#import "AppConstant.h"
+
 
 @interface CartViewController ()
 {
@@ -114,5 +116,47 @@
 }
 
 - (IBAction)btnCheckOut:(id)sender {
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kRememberUser] == nil || [[[NSUserDefaults standardUserDefaults] objectForKey:kRememberUser] integerValue] == 0) {
+        
+        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LOGIN"];
+        [self presentViewController:viewController animated:YES completion:nil];
+        
+    }
+    else {
+        
+        //payment page
+    }
+    
 }
+
+#pragma mark - Button Menu methods
+
+- (IBAction)btnMenu:(id)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:(id)self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:nil, nil];
+    
+    for (NSString *string in MENU_ARRAY) {
+        [actionSheet addButtonWithTitle:string];
+    }
+    
+    [actionSheet showInView:self.view];
+    
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        
+        if (buttonIndex != 6) {
+            
+            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:[MENU_IDENTIFIER_ARRAY objectAtIndex:buttonIndex-1]];
+            [self presentViewController:viewController animated:YES completion:nil];
+        }
+        
+    }
+}
+
+
 @end

@@ -48,4 +48,14 @@
 
 #define FETCH_PRODUCT_DETAIL @"showproductdetail.php?"
 
+
+/*      KEY NAMES       */
+
+#define kRememberUser @"rememberUser"
+
+#define kUserId @"userID"
+
+
+
+
 #endif /* AppConstant_h */

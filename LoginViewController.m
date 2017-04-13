@@ -1,26 +1,26 @@
 //
-//  ContactUsViewController.m
+//  LoginViewController.m
 //  Tradmark2
 //
-//  Created by EXCELLENT2 on 08/04/17.
+//  Created by EXCELLENT2 on 13/04/17.
 //  Copyright © 2017 EXCELLENT2. All rights reserved.
 //
 
-#import "ContactUsViewController.h"
-
+#import "LoginViewController.h"
 #import "AppConstant.h"
 
-@interface ContactUsViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation ContactUsViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    _txtEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_txtEmail.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    _txtPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:_txtPassword.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +28,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnRegistration:(id)sender {
+     
+     
+ }
+
+- (IBAction)btnForgotPassword:(id)sender {
+    
+    
+}
+
+
+- (IBAction)btnSubmit:(id)sender {
+    
+    
+}
 
 #pragma mark - Button Menu methods
 
@@ -56,6 +71,7 @@
         
     }
 }
+
 
 
 @end
