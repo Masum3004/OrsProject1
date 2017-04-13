@@ -227,6 +227,7 @@
 		B30798801E9893600045D863 = {
 			isa = PBXGroup;
 			children = (
+				B3DFCD581E9F7E9100A86BB3 /* Framework */,
 				B3178C0D1E9DE8AD0021D850 /* AppConstant.h */,
 				B3178BF31E9DDF8F0021D850 /* Framework */,
 				B30798D61E98A5470045D863 /* Images */,
@@ -529,6 +530,13 @@
 				B3DFCD561E9F7A5000A86BB3 /* ForgotPasswordViewController.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		B3DFCD581E9F7E9100A86BB3 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

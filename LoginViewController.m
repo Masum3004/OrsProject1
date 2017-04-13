@@ -29,13 +29,19 @@
 }
 
 - (IBAction)btnRegistration:(id)sender {
-     
+    
+    
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"REGISTRATION"];
+    
+    [self presentViewController:viewController animated:YES completion:nil];
      
  }
 
 - (IBAction)btnForgotPassword:(id)sender {
     
+    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FORGOT_PASSWORD"];
     
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 
