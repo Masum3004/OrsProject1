@@ -28,6 +28,7 @@
 		B30798EB1E98B0F30045D863 /* cancel-music.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EA1E98B0F30045D863 /* cancel-music.png */; };
 		B30798ED1E98B1BD0045D863 /* sort-down.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EC1E98B1BD0045D863 /* sort-down.png */; };
 		B30798EF1E98B9D40045D863 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = B30798EE1E98B9D40045D863 /* more.png */; };
+		B312FC261EAB0B9900607FDC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B312FC251EAB0B9900607FDC /* libz.tbd */; };
 		B3178BCF1E9DDF7A0021D850 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3178BBF1E9DDF7A0021D850 /* AFNetworkActivityIndicatorManager.m */; };
 		B3178BD01E9DDF7A0021D850 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B3178BC11E9DDF7A0021D850 /* UIActivityIndicatorView+AFNetworking.m */; };
 		B3178BD11E9DDF7A0021D850 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B3178BC31E9DDF7A0021D850 /* UIAlertView+AFNetworking.m */; };
@@ -126,6 +127,7 @@
 		B30798EA1E98B0F30045D863 /* cancel-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-music.png"; sourceTree = "<group>"; };
 		B30798EC1E98B1BD0045D863 /* sort-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sort-down.png"; sourceTree = "<group>"; };
 		B30798EE1E98B9D40045D863 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		B312FC251EAB0B9900607FDC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B3178BBE1E9DDF7A0021D850 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		B3178BBF1E9DDF7A0021D850 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		B3178BC01E9DDF7A0021D850 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B312FC261EAB0B9900607FDC /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +239,7 @@
 				B30798A51E9893600045D863 /* Tradmark2Tests */,
 				B30798B01E9893600045D863 /* Tradmark2UITests */,
 				B307988A1E9893600045D863 /* Products */,
+				B312FC241EAB0B9900607FDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +380,14 @@
 				B30798E81E98AC2B0045D863 /* ContactUsViewController.m */,
 			);
 			name = ContactUs;
+			sourceTree = "<group>";
+		};
+		B312FC241EAB0B9900607FDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B312FC251EAB0B9900607FDC /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B3178BA11E9DDBDA0021D850 /* AFNetworking */ = {
@@ -878,9 +890,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tradmark2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Adcreators.Tradmark2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -890,9 +907,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tradmark2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Adcreators.Tradmark2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
